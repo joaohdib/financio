@@ -1,10 +1,9 @@
-// routes/index.ts
 import { Router } from 'express';
-import { test } from '../controllers/userController';
+import userController from '../controllers/userController';
 
 const router = Router();
 
-// Definindo a rota POST /signup
-router.post('/test', test);
+router.post('/signup', userController.signUp);
+router.post('/login', userController.login);
 
 export default router;
